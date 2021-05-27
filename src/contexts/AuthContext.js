@@ -18,11 +18,11 @@ export function AuthProvider({ children }) {
     const unsubscibe = auth.onAuthStateChanged(user => {
       setCurrentUser(user)
     })
-    
+
     return unsubscibe
   }, [])
 
-  const value = { currentUser }
+  const value = { currentUser, signup }
 
   return (
     <AuthContext.Provider value={value}>
